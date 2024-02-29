@@ -1,0 +1,38 @@
+<div class="screen">
+    <div class="content">
+        <div class="first-line">
+            <div class="title"><span style="color: #0D2B4C;">Все наши </span><span style="color: #0045E6;">ПК*</span></div>
+            <div class="fn">*ПК - придорожный комплекс</div>
+        </div>
+        <div class="subtitle">Доступные услуги на придорожных комплексах</div>
+        <div class="services">
+            <div class="service-button" id="all" (click)="filterByServices('all')" [@all]="all ? 'true' : 'false'">Все</div>
+            <div class="service-button" id="carWashing" (click)="filterByServices('carWashing')" [@carWashing]="carWashing ? 'true' : 'false'">Мойка</div>
+            <div class="service-button" id="parking" (click)="filterByServices('parking')" [@parking]="parking ? 'true' : 'false'">Стоянка</div>
+            <div class="service-button" id="hotel" (click)="filterByServices('hotel')" [@hotel]="hotel ? 'true' : 'false'">Гостиница</div>
+            <div class="service-button" id="cafe" (click)="filterByServices('cafe')" [@cafe]="cafe ? 'true' : 'false'">Кафе</div>
+            <div class="service-button" id="shower" (click)="filterByServices('shower')" [@shower]="shower ? 'true' : 'false'">Душ</div>
+            <div class="service-button" id="laundry" (click)="filterByServices('laundry')" [@laundry]="laundry ? 'true' : 'false'">Прачечная</div>
+            <div class="service-button" id="minimarket" (click)="filterByServices('minimarket')" [@minimarket]="minimarket ? 'true' : 'false'">Минимаркет</div>
+            <div class="service-button" id="tireService" (click)="filterByServices('tireService')" [@tireService]="tireService ? 'true' : 'false'">Шиномонтаж</div>
+            <div class="service-button" id="desinfection" (click)="filterByServices('desinfection')" [@desinfection]="desinfection ? 'true' : 'false'">Дезинфекция</div>
+        </div>
+        <div class="cards-container">
+
+            <mat-card class="dialog-monitor" *ngFor="let product of products" (click)="openDialog(product)">
+                <mat-card-header>
+                <img class='mat-card-image' src={{product.image}} />
+                </mat-card-header>
+                <mat-card-content>
+                    <p style="margin-bottom: 0px;"><span class="name">{{product.name}} </span><span class="comment">{{product?.comment}}</span></p>
+                    <p style="margin-top: 8px;">
+                        <img src="../../../assets/images/svg-elems/Vector.svg" class="location">
+                        <span class="city">{{product.city}}</span>
+                    </p>
+                </mat-card-content>
+            </mat-card>
+        
+            <div class="translation"></div>
+
+    </div>
+</div>

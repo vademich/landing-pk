@@ -1,0 +1,52 @@
+@background: #0045E6;
+
+.line {
+    width: 100vw;
+    height: 83px;
+    background-color: @background;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    z-index: 499;
+
+}
+.content {
+    width: 1280px;
+    display: flex;
+    justify-content: space-between;
+}
+.headings {
+    width: 735px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-heading {
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+}
+a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.logo {
+    background-image: url(../../../../assets/images/Logo_PK.svg);
+    width: 45px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+@media (max-width: 1328px) {
+    .content {
+        margin: 0 24px;
+    }
+    .menu-heading {
+        margin-left: 24px;
+    }
+}

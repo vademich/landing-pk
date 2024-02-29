@@ -1,0 +1,111 @@
+<div class="screen">
+  <div class="rectangle mobile"></div>
+    <div class="content">
+        <div class="container-1">
+            <div class="lets"><div class="rectangle monitor"></div><p>Давайте работать вместе</p></div>
+            <!--  -->
+            <form class="example-form">
+
+              <div class="name">
+                <mat-form-field class="example-full-width">
+                  <input matInput [formControl]="nameFormControl" [errorStateMatcher]="matcher"
+                         placeholder="Ваше имя">
+                  <mat-error *ngIf="!nameFormControl.hasError('required')">
+                    <!-- Введите ваше <strong>имя</strong> -->
+                  </mat-error>
+                  <!-- <mat-error *ngIf="nameFormControl.hasError('required')">
+                    Введите ваше <strong>имя</strong>
+                  </mat-error> -->
+                </mat-form-field>
+              </div>
+
+              <div class="phone-email">
+                <mat-form-field class="example-full-width">
+                  <input matInput [formControl]="telFormControl" [errorStateMatcher]="matcher"
+                        placeholder="Телефон">
+                  <mat-error *ngIf="telFormControl.hasError('tel') && !telFormControl.hasError('required')">
+                    <!-- Введите <strong>номер телефона</strong> -->
+                  </mat-error>
+                  <mat-error *ngIf="emailFormControl.hasError('required')">
+                    <!-- Введите <strong>номер телефона</strong> -->
+                  </mat-error>
+                </mat-form-field>
+                <div style="width: 64px;"></div>
+                <mat-form-field class="example-full-width">
+                  <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                        placeholder="E-mail">
+                  <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                    <!-- Введите <strong>e-mail</strong> -->
+                  </mat-error>
+                  <mat-error *ngIf="emailFormControl.hasError('required')">
+                    <!-- Введите <strong>e-mail</strong> -->
+                  </mat-error>
+                </mat-form-field>
+              </div>
+
+              <mat-form-field class="example-full-width" style="border: solid #626262 1px;">
+                <textarea matInput placeholder="Кратко расскажите, что вас интересует"></textarea>
+              </mat-form-field>
+            </form>
+            <!--  -->
+            <div class="subscr-btn">
+              <div class="subscr monitor">Нажимая на кнопку, вы соглашаетесь с <span style="color: white;">политикой конфиденциальности</span> 
+                в отношении обработки ваших персональных данных</div>
+              <div class="btn">
+                Оставить заявку
+              </div>
+            </div>
+            <div class="copyright monitor">© 2024 ООО«ПК». Все права защищены</div>
+            <!--  -->
+            <div class="subscr mobile">Нажимая на кнопку, вы соглашаетесь с <span style="color: white;">политикой конфиденциальности</span> 
+              в отношении обработки ваших персональных данных</div>
+              <!--  -->
+              <hr class="mobile">
+        </div>
+        <div class="container-2">
+              <!--  -->
+              <div class="block">
+                <div>
+                  <div class="our-ofice">Наш офис</div>
+                  <div class="address">г. Воронеж, ул. Дорожная, 46</div>
+                </div>
+                <div>
+                  <div class="wrap" id="wrap1">
+                    <div class="inner-wrap" (mouseenter)="swipePk()" (mouseleave)="swipePk()">
+                      <div class="load" [@pk-load]="pkload ? 'on' : 'off'"></div>
+                      <a href="mailto:{{ooopk}}">
+                        <div class="ooopk" [@pk-swipe]="pkload ? 'on' : 'off'">
+                          <div class="xnya"></div>
+                          {{ooopk}}
+                          <img style="margin-left: 8px;" src="../../../assets/images/svg-elems/letter.svg">
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="wrap" id="wrap2">
+                    <div class="inner-wrap" (mouseenter)="swipeTel()" (mouseleave)="swipeTel()">
+                      <div class="load" [@tel-load]="telswiped ? 'on' : 'off'"></div>
+                      <a href="tel:{{tel}}">
+                        <div class="tel" [@tel-swipe]="telswiped ? 'on' : 'off'">
+                          <div class="xnya"></div>
+                          <div style="width: 171px; min-width: 171px;">{{tel}}</div>
+                          <img style="margin-left: 8px;" src="../../../assets/images/svg-elems/phone.svg">
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+              <div class="socials">
+                <div class="tg soc"></div>
+                <div class="ig soc"></div>
+                <div class="yt soc"></div>
+              </div>
+              <hr class="mobile">
+              <div class="mobile" style="width: 100%; display: flex; align-items: center; justify-content: center;">
+                <div class="copyright mobile">© 2024 ООО«ПК». Все права защищены</div>
+              </div>
+        </div>
+    </div>
+</div>

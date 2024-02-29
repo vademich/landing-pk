@@ -1,0 +1,418 @@
+<div class="container monitor">
+    <mat-card>
+        <mat-card-content>
+            <div style="display: flex; flex-direction: row;">
+                <div>
+                    <img style="margin-top: 24px;" class="main-photo" mat-card-image src={{data?.large}} />
+                    <p>
+                        <span class="small">Придорожный комплекс</span>
+                    </p>
+                    <p><span class="name">{{data?.name}}</span><span class="comment"> {{data?.comment}}</span></p>
+                    <p style="margin-top: -10px;">
+                        <img style="margin-right: 2px;" src="../../../assets/images/svg-elems/Vector.svg">
+                        <span class="city">{{data.city}}</span>
+                    </p>
+                    <div style="margin-bottom: 16px;">
+                        <img style="cursor: pointer; margin-right: 8px;" src="../../../assets/images/svg-elems/button_panorama.svg">
+                        <img style="cursor: pointer;" src="../../../assets/images/svg-elems/button_map.svg">
+                    </div>
+                </div>
+                <div>
+                    <div style="display: flex; justify-content: right;">
+                        <mat-icon [mat-dialog-close]="'CLOSE'" class="close-btn">close</mat-icon>
+                    </div>
+                    <div class="block">
+                        <p style="margin-left: 8px;">Основные услуги</p>
+                        <div class="basicServices-group">
+                            <div *ngIf="data.configure?.basicServices.carWashing">
+                                <div class="carWashing"></div>
+                            </div>
+                            <div *ngIf="data.configure?.basicServices.parking">
+                                <div class="parking"></div>
+                            </div>
+                            <div *ngIf="data.configure?.basicServices.hotel">
+                                <div class="hotel"></div>
+                            </div>
+                            <div *ngIf="data.configure?.basicServices.cafe">
+                                <div class="cafe"></div>
+                            </div>
+                            <div *ngIf="data.configure?.basicServices.shower">
+                                <div class="shower"></div>
+                            </div>
+                            <div *ngIf="data.configure?.basicServices.laundry">
+                                <div class="laundry"></div>
+                            </div>
+                            <div *ngIf="data.configure?.basicServices.minimarket">
+                                <div class="minimarket"></div>
+                            </div>
+                            <div *ngIf="data.configure?.basicServices.tireService">
+                                <div class="tireService"></div>
+                            </div>
+                            <div *ngIf="data.configure?.basicServices.sauna">
+                                <div class="sauna"></div>
+                            </div>
+                            <div *ngIf="data.configure?.basicServices.desinfection">
+                                <div class="desinfection"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <p style="margin-left: 8px; margin-bottom: 10px;">Дополнительные услуги</p>
+                            <div class="additiveService-group">
+
+                                <div *ngIf="data.configure?.additiveServices.wc">
+                                    <div class="additive">
+                                        <mat-icon class="check">check</mat-icon>
+                                        <div class="additiveService-name">Туалет</div>
+                                    </div>
+                                </div>
+                    
+                                <div *ngIf="data.configure?.additiveServices.security">
+                                    <div class="additive">
+                                        <mat-icon class="check">check</mat-icon>
+                                        <div class="additiveService-name">Охрана</div>
+                                    </div>
+                                </div>
+                                
+                                <div *ngIf="data.configure?.additiveServices.cctv">
+                                    <div class="additive">
+                                        <mat-icon class="check">check</mat-icon>
+                                        <div class="additiveService-name">Видеонаблюдение</div>
+                                    </div>
+                                </div>
+                    
+                                <div *ngIf="data.configure?.additiveServices.fencing">
+                                    <div class="additive">
+                                        <mat-icon class="check">check</mat-icon>
+                                        <div class="additiveService-name">Ограждение</div>
+                                    </div>
+                                </div>
+                    
+                                <div *ngIf="data.configure?.additiveServices.barrier">
+                                    <div class="additive">
+                                        <mat-icon class="check">check</mat-icon>
+                                        <div class="additiveService-name">Шлагбаум</div>
+                                    </div>
+                                </div>
+                                
+                                <div *ngIf="data.configure?.additiveServices.internet">
+                                    <div class="additive">
+                                        <mat-icon class="check">check</mat-icon>
+                                        <div class="additiveService-name">Интернет</div>
+                                    </div>
+                                </div>
+                    
+                                <div *ngIf="data.configure?.additiveServices.wifi">
+                                    <div class="additive">
+                                        <mat-icon class="check">check</mat-icon>
+                                        <div class="additiveService-name">WiFi</div>
+                                    </div>
+                                </div>
+                    
+                                <div *ngIf="data.configure?.additiveServices.printer">
+                                    <div class="additive">
+                                        <mat-icon class="check">check</mat-icon>
+                                        <div class="additiveService-name">Принтер</div>
+                                    </div>
+                                </div>
+                    
+                                <div *ngIf="data.configure?.additiveServices.waitingRoom">
+                                    <div class="additive">
+                                        <mat-icon class="check">check</mat-icon>
+                                        <div class="additiveService-name">Комната ожидания</div>
+                                    </div>
+                                </div>
+                    
+                                <div *ngIf="data.configure?.additiveServices.atm">
+                                    <div class="additive">
+                                        <mat-icon class="check">check</mat-icon>
+                                        <div class="additiveService-name">Банкомат</div>
+                                    </div>
+                                </div>
+                    
+                                <div *ngIf="data.configure?.additiveServices.pallets">
+                                    <div class="additive">
+                                        <mat-icon class="check">check</mat-icon>
+                                        <div class="additiveService-name">Поддоны</div>
+                                    </div>
+                                </div>
+                                
+                                <div *ngIf="data.configure?.additiveServices.sparePartsStore">
+                                    <div class="additive">
+                                        <mat-icon class="check">check</mat-icon>
+                                        <div class="additiveService-name">Магазин запчастей</div>
+                                    </div>
+                                </div>
+                    
+                                <div *ngIf="data.configure?.additiveServices.starterCharger">
+                                    <div class="additive">
+                                        <mat-icon class="check">check</mat-icon>
+                                        <div class="additiveService-name">Пуско-зарядное устройство</div>
+                                    </div>
+                                </div>
+                    
+                                <div *ngIf="data.configure?.additiveServices.minimarket">
+                                    <div class="additive">
+                                        <mat-icon class="check">check</mat-icon>
+                                        <div class="additiveService-name">Минимаркет</div>
+                                    </div>
+                                </div>
+                    
+                                <div *ngIf="data.configure?.additiveServices.farmacy">
+                                    <div class="additive">
+                                        <mat-icon class="check">check</mat-icon>
+                                        <div class="additiveService-name">Аптека</div>
+                                    </div>
+                                </div>
+                    
+                                <div *ngIf="data.configure?.additiveServices.gasStation">
+                                    <div class="additive">
+                                        <mat-icon class="check">check</mat-icon>
+                                        <div class="additiveService-name">Заправка</div>
+                                    </div>
+                                </div>
+                    
+                                <div *ngIf="data.configure?.additiveServices.paymentTerminal">
+                                    <div class="additive">
+                                        <mat-icon class="check">check</mat-icon>
+                                        <div class="additiveService-name">Платежный терминал</div>
+                                    </div>
+                                </div>
+                    
+                                <div *ngIf="data.configure?.additiveServices.accumulatorCharging">
+                                    <div class="additive">
+                                        <mat-icon class="check">check</mat-icon>
+                                        <div class="additiveService-name">Зарядка аккумулятора</div>
+                                    </div>
+                                </div>
+                    
+                                <div *ngIf="data.configure?.additiveServices.autoAccessories">
+                                    <div class="additive">
+                                        <mat-icon class="check">check</mat-icon>
+                                        <div class="additiveService-name">Автоаксессуары</div>
+                                    </div>
+                                </div>
+                    
+                                <div *ngIf="data.configure?.additiveServices.tachographRepair">
+                                    <div class="additive">
+                                        <mat-icon class="check">check</mat-icon>
+                                        <div class="additiveService-name">Ремонт тахографа</div>
+                                    </div>
+                                </div>
+                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+<!--  -->
+
+<div class="container mobile" style="background-image: url({{data.image}});">
+
+    <div style="display: flex; justify-content: end;">
+        <div class="close-btn" [mat-dialog-close]="'CLOSE'">
+            <mat-icon>close</mat-icon>
+        </div>
+    </div>
+
+    <div style="width: 300px; height: 135px;"></div>
+
+    <div class="description-block">
+        <div><span class="small">Придорожный комплекс</span></div>
+        <div style="margin-top: 8px"><span class="name">{{data?.name}}</span></div>
+        <span class="comment"> {{data?.comment}}</span>
+        <div style="margin-top: 8px">
+            <img src="../../../assets/images/svg-elems/Vector.svg">
+            <span class="city">{{data.city}}</span>
+        </div>
+        <div class="row">
+            <div class="button-panorama"></div>
+            <div class="button-map"></div>
+        </div>
+    </div>
+
+    <div class="white-block">
+        <div class="subtitle">Основные услуги</div>
+        <div class="basicServices-group">
+            <div *ngIf="data.configure?.basicServices.carWashing">
+                <div class="carWashing"></div>
+            </div>
+            <div *ngIf="data.configure?.basicServices.parking">
+                <div class="parking"></div>
+            </div>
+            <div *ngIf="data.configure?.basicServices.hotel">
+                <div class="hotel"></div>
+            </div>
+            <div *ngIf="data.configure?.basicServices.cafe">
+                <div class="cafe"></div>
+            </div>
+            <div *ngIf="data.configure?.basicServices.shower">
+                <div class="shower"></div>
+            </div>
+            <div *ngIf="data.configure?.basicServices.laundry">
+                <div class="laundry"></div>
+            </div>
+            <div *ngIf="data.configure?.basicServices.minimarket">
+                <div class="minimarket"></div>
+            </div>
+            <div *ngIf="data.configure?.basicServices.tireService">
+                <div class="tireService"></div>
+            </div>
+            <div *ngIf="data.configure?.basicServices.sauna">
+                <div class="sauna"></div>
+            </div>
+            <div *ngIf="data.configure?.basicServices.desinfection">
+                <div class="desinfection"></div>
+            </div>
+        </div>
+        <div class="subtitle subtitle-2">Дополнительные удобства</div>
+
+        <div class="additiveService-group">
+
+            <div *ngIf="data.configure?.additiveServices.wc">
+                <div class="additive">
+                    <mat-icon class="check">check</mat-icon>
+                    <div class="additiveService-name">Туалет</div>
+                </div>
+            </div>
+
+            <div *ngIf="data.configure?.additiveServices.security">
+                <div class="additive">
+                    <mat-icon class="check">check</mat-icon>
+                    <div class="additiveService-name">Охрана</div>
+                </div>
+            </div>
+            
+            <div *ngIf="data.configure?.additiveServices.cctv">
+                <div class="additive">
+                    <mat-icon class="check">check</mat-icon>
+                    <div class="additiveService-name">Видеонаблюдение</div>
+                </div>
+            </div>
+
+            <div *ngIf="data.configure?.additiveServices.fencing">
+                <div class="additive">
+                    <mat-icon class="check">check</mat-icon>
+                    <div class="additiveService-name">Ограждение</div>
+                </div>
+            </div>
+
+            <div *ngIf="data.configure?.additiveServices.barrier">
+                <div class="additive">
+                    <mat-icon class="check">check</mat-icon>
+                    <div class="additiveService-name">Шлагбаум</div>
+                </div>
+            </div>
+            
+            <div *ngIf="data.configure?.additiveServices.internet">
+                <div class="additive">
+                    <mat-icon class="check">check</mat-icon>
+                    <div class="additiveService-name">Интернет</div>
+                </div>
+            </div>
+
+            <div *ngIf="data.configure?.additiveServices.wifi">
+                <div class="additive">
+                    <mat-icon class="check">check</mat-icon>
+                    <div class="additiveService-name">WiFi</div>
+                </div>
+            </div>
+
+            <div *ngIf="data.configure?.additiveServices.printer">
+                <div class="additive">
+                    <mat-icon class="check">check</mat-icon>
+                    <div class="additiveService-name">Принтер</div>
+                </div>
+            </div>
+
+            <div *ngIf="data.configure?.additiveServices.waitingRoom">
+                <div class="additive">
+                    <mat-icon class="check">check</mat-icon>
+                    <div class="additiveService-name">Комната ожидания</div>
+                </div>
+            </div>
+
+            <div *ngIf="data.configure?.additiveServices.atm">
+                <div class="additive">
+                    <mat-icon class="check">check</mat-icon>
+                    <div class="additiveService-name">Банкомат</div>
+                </div>
+            </div>
+
+            <div *ngIf="data.configure?.additiveServices.pallets">
+                <div class="additive">
+                    <mat-icon class="check">check</mat-icon>
+                    <div class="additiveService-name">Поддоны</div>
+                </div>
+            </div>
+            
+            <div *ngIf="data.configure?.additiveServices.sparePartsStore">
+                <div class="additive">
+                    <mat-icon class="check">check</mat-icon>
+                    <div class="additiveService-name">Магазин запчастей</div>
+                </div>
+            </div>
+
+            <div *ngIf="data.configure?.additiveServices.starterCharger">
+                <div class="additive">
+                    <mat-icon class="check">check</mat-icon>
+                    <div class="additiveService-name">Пуско-зарядное устройство</div>
+                </div>
+            </div>
+
+            <div *ngIf="data.configure?.additiveServices.minimarket">
+                <div class="additive">
+                    <mat-icon class="check">check</mat-icon>
+                    <div class="additiveService-name">Минимаркет</div>
+                </div>
+            </div>
+
+            <div *ngIf="data.configure?.additiveServices.farmacy">
+                <div class="additive">
+                    <mat-icon class="check">check</mat-icon>
+                    <div class="additiveService-name">Аптека</div>
+                </div>
+            </div>
+
+            <div *ngIf="data.configure?.additiveServices.gasStation">
+                <div class="additive">
+                    <mat-icon class="check">check</mat-icon>
+                    <div class="additiveService-name">Заправка</div>
+                </div>
+            </div>
+
+            <div *ngIf="data.configure?.additiveServices.paymentTerminal">
+                <div class="additive">
+                    <mat-icon class="check">check</mat-icon>
+                    <div class="additiveService-name">Платежный терминал</div>
+                </div>
+            </div>
+
+            <div *ngIf="data.configure?.additiveServices.accumulatorCharging">
+                <div class="additive">
+                    <mat-icon class="check">check</mat-icon>
+                    <div class="additiveService-name">Зарядка аккумулятора</div>
+                </div>
+            </div>
+
+            <div *ngIf="data.configure?.additiveServices.autoAccessories">
+                <div class="additive">
+                    <mat-icon class="check">check</mat-icon>
+                    <div class="additiveService-name">Автоаксессуары</div>
+                </div>
+            </div>
+
+            <div *ngIf="data.configure?.additiveServices.tachographRepair">
+                <div class="additive">
+                    <mat-icon class="check">check</mat-icon>
+                    <div class="additiveService-name">Ремонт тахографа</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,25 @@
+<div class="out-header">
+    <div class="header">
+        <div class="row-img-group">
+            <a href="#main">
+                <div class="logo"></div>
+            </a>
+            <div (click)="menuShowHide()" class="app-burger">
+                <div class="block">
+                    <div class="line1" [@line1]="menuClicked ? 'cross' : ''"></div>
+                    <div class="line2" [@line2]="menuClicked ? 'cross' : ''"></div>
+                    <div class="line3" [@line3]="menuClicked ? 'cross' : ''"></div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-mob" [@menuclick]="menuClicked ? 'expand' : 'collapse'">
+            <div>
+                <div class="menu-mob-component"><a (click)="menuShowHide()" href="#our-pk">Наши ПК</a></div>
+                <div class="menu-mob-component"><a (click)="menuShowHide()" href="#soc-prog">Социальная программа</a></div>
+                <div class="menu-mob-component"><a (click)="menuShowHide()" href="#geography">География</a></div>
+                <div class="menu-mob-component"><a (click)="menuShowHide()" href="#contacts">Контакты</a></div>
+                <div class="menu-mob-component ru-en row"></div>
+            </div>
+        </div>
+    </div>
+</div>

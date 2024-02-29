@@ -1,0 +1,134 @@
+<div class="geography">
+    <div class="page">
+        <div class="content">
+            <div class="title"><span style="color: blue;">География</span></div>
+            <div class="subtitle">Наши ПК расположены на всех основных федеральных
+                трассах от Краснодара до Новосибирска </div>
+        </div>
+        <div>
+            <div class="point-1" (mouseenter)="showPk1()" (mouseleave)="hidePk1()" (click)="openDialog(products[3])"></div>
+            <div class="point-2" (mouseenter)="showPk2()" (mouseleave)="hidePk2()" (click)="openDialog(products[1])"></div>
+            <div class="point-3" (mouseenter)="showPk3()" (mouseleave)="hidePk3()" (click)="openDialog(products[2])"></div>
+            <div class="point-4" (mouseenter)="showPk4()" (mouseleave)="hidePk4()" (click)="openDialog(products[0])"></div>
+            <div class="point-5" (mouseenter)="showPk5()" (mouseleave)="hidePk5()" (click)="openDialog(products[4])"></div>
+            <div class="point-6" (mouseenter)="showPk6()" (mouseleave)="hidePk6()" (click)="openDialog(products[5])"></div>
+            <div class="point-7" (mouseenter)="showPk7()" (mouseleave)="hidePk7()" (click)="openDialog(products[6])"></div>
+            <div class="point-8" (mouseenter)="showPk8()" (mouseleave)="hidePk8()" (click)="openDialog(products[7])"></div>
+            <div class="point-9" (mouseenter)="showPk9()" (mouseleave)="hidePk9()" (click)="openDialog(products[9])"></div>
+            <div class="point-10" (mouseenter)="showPk10()" (mouseleave)="hidePk10()" (click)="openDialog(products[10])"></div>
+            <div class="point-11" (mouseenter)="showPk11()" (mouseleave)="hidePk11()" (click)="openDialog(products[8])"></div>
+        </div>
+        <div>
+            <div [@point-1]="pk1 ? 'display' : 'none'">
+                <div class="pk-card-1">
+                    <div class="pointer"></div>
+                    <div class="card-content">
+                        <div class="pk-img-1"></div>
+                        <div class="name">М4, 1360 км</div>
+                        <div class="city"><mat-icon style="font-size: 16px; position: relative; left: 7px; top: 9px;">location_on</mat-icon>Адыгейск</div>
+                    </div>
+                </div>
+            </div>
+            <div [@point-2]="pk2 ? 'display' : 'none'">
+                <div class="pk-card-2">
+                    <div class="pointer"></div>
+                    <div class="card-content">
+                        <div class="pk-img-2"></div>
+                        <div class="name">М4, 1077 км</div>
+                        <div class="city"><mat-icon style="font-size: 16px; position: relative; left: 7px; top: 9px;">location_on</mat-icon>Ростов-на-Дону</div>
+                    </div>
+                </div>
+            </div>
+            <div [@point-3]="pk3 ? 'display' : 'none'">
+                <div class="pk-card-3">
+                    <div class="pointer"></div>
+                    <div class="card-content">
+                        <div class="pk-img-3"></div>
+                        <div class="name">М4, 1077 км</div>
+                        <div class="city"><mat-icon style="font-size: 16px; position: relative; left: 7px; top: 9px;">location_on</mat-icon>Ростов-на-Дону</div>
+                    </div>
+                </div>
+            </div>
+            <div [@point-4]="pk4 ? 'display' : 'none'">
+                <div class="pk-card-4">
+                    <div class="pointer"></div>
+                    <div class="card-content">
+                        <div class="pk-img-4"></div>
+                        <div class="name">М4, 492 км</div>
+                        <div class="city"><mat-icon style="font-size: 16px; position: relative; left: 7px; top: 9px;">location_on</mat-icon>Воронеж</div>
+                    </div>
+                </div>
+            </div>
+            <div [@point-5]="pk5 ? 'display' : 'none'">
+                <div class="pk-card-5">
+                    <div class="pointer"></div>
+                    <div class="card-content">
+                        <div class="pk-img-5"></div>
+                        <div class="name">М5, 751 км</div>
+                        <div class="city"><mat-icon style="font-size: 16px; position: relative; left: 7px; top: 9px;">location_on</mat-icon>Кузнецк</div>
+                    </div>
+                </div>
+            </div>
+            <div [@point-6]="pk6 ? 'display' : 'none'">
+                <div class="pk-card-6">
+                    <div class="pointer"></div>
+                    <div class="card-content">
+                        <div class="pk-img-6"></div>
+                        <div class="name">М5, 894 км</div>
+                        <div class="city"><mat-icon style="font-size: 16px; position: relative; left: 7px; top: 9px;">location_on</mat-icon>Сызрань</div>
+                    </div>
+                </div>
+            </div>
+            <div [@point-7]="pk7 ? 'display' : 'none'">
+                <div class="pk-card-7">
+                    <div class="pointer"></div>
+                    <div class="card-content">
+                        <div class="pk-img-7"></div>
+                        <div class="name">М7, 1004 км</div>
+                        <div class="city"><mat-icon style="font-size: 16px; position: relative; left: 7px; top: 9px;">location_on</mat-icon>Набережные Челны</div>
+                    </div>
+                </div>
+            </div>
+            <div [@point-8]="pk8 ? 'display' : 'none'">
+                <div class="pk-card-8">
+                    <div class="pointer"></div>
+                    <div class="card-content">
+                        <div class="pk-img-8"></div>
+                        <div class="name">М7, 1080 км</div>
+                        <div class="city"><mat-icon style="font-size: 16px; position: relative; left: 7px; top: 9px;">location_on</mat-icon>Набережные Челны</div>
+                    </div>
+                </div>
+            </div>
+            <div [@point-9]="pk9 ? 'display' : 'none'">
+                <div class="pk-card-9">
+                    <div class="pointer"></div>
+                    <div class="card-content">
+                        <div class="pk-img-9"></div>
+                        <div class="name">P351, 27 км</div>
+                        <div class="city"><mat-icon style="font-size: 16px; position: relative; left: 7px; top: 9px;">location_on</mat-icon>Екатеринбург</div>
+                    </div>
+                </div>
+            </div>
+            <div [@point-10]="pk10 ? 'display' : 'none'">
+                <div class="pk-card-10">
+                    <div class="pointer"></div>
+                    <div class="card-content">
+                        <div class="pk-img-10"></div>
+                        <div class="name">P402, 578 км</div>
+                        <div class="city"><mat-icon style="font-size: 16px; position: relative; left: 7px; top: 9px;">location_on</mat-icon>Омск</div>
+                    </div>
+                </div>
+            </div>
+            <div [@point-11]="pk11 ? 'display' : 'none'">
+                <div class="pk-card-11">
+                    <div class="pointer"></div>
+                    <div class="card-content">
+                        <div class="pk-img-11"></div>
+                        <div class="name">P254, 8 км</div>
+                        <div class="city"><mat-icon style="font-size: 16px; position: relative; left: 7px; top: 9px;">location_on</mat-icon>Новосибирск</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

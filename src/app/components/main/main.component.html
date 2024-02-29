@@ -1,0 +1,40 @@
+<div class="screen">
+    <div class="content">
+        <div class="title">крупнейшая сеть придорожных комплексов в России</div>
+        <div class="subtitle">От Краснодара до Новосибирска</div>
+        <div class="big-image"></div>
+        <div class="arrowBlock monitor">
+            <a href="#our-pk">
+                <div class="circle" (mouseenter)="circleHover()" (mouseleave)="circleHover()">
+                    <div class="arrow-blue" [@circle]="isHover ? 'on' : 'off'"></div>
+                    <div class="arrow-white" [@circle]="isHover ? 'on' : 'off'"></div>
+                </div>
+            </a>
+        </div>
+        <div class="info row">
+            <div class="block">
+                <div class="number">11</div>
+                <div class="line"></div>
+                <div class="text">придорожных комплексов в России</div>
+            </div>
+            <div class="block">
+                <div class="number">10</div>
+                <div class="line"></div>
+                <div class="text">лет улучшаем комфорт водителя в дороге</div>
+            </div>
+            <div class="block">
+                <div class="number">10</div>
+                <div class="line"></div>
+                <div class="text">предоставляемых услуг</div>
+            </div>
+        </div>
+        <div class="arrowBlock mobile">
+            <a href="#our-pk">
+                <div class="circle" (mouseenter)="circleHover()" (mouseleave)="circleHover()">
+                    <div class="arrow-blue" [@circle]="isHover ? 'on' : 'off'"></div>
+                    <div class="arrow-white" [@circle]="isHover ? 'on' : 'off'"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
